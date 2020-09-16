@@ -7,11 +7,31 @@
 //
 
 import UIKit
-import AVFoundation
+import AVKit
 
 class ViewController: UIViewController {
     //오디오 재생을 위한 객체의 참조를 저장하기 위한 변수
     var audioPlayer: AVAudioPlayer?
+    
+    @IBAction func videoPlay(_ sender: Any) {
+        //번들(프로젝트)에 있는 비디오 파일의 경로를 생성
+        let filePath = Bundle.main.path(forResource: "IPhone3G", ofType: "mov")
+        //URL로 생성
+        let url = URL(fileURLWithPath: filePath!)
+        
+        //비디오 재생기 생성
+        let player = AVPlayer(url: url)
+        
+        //재생기를 화면에 출력
+        let playerController = AVPlayerViewController()
+        playerController.player = player
+        //현재 화면에 추가하기
+        self.addChild(playerController)
+        self.view.addSubview(playerController.view)
+        playerController.view.frame = self.view.frame
+        //재생
+        player.play()
+    }
     
     @IBAction func audioPlay(_ sender: Any) {
         //백그라운드에서 오디오 재생이 이어지도록 설정
@@ -45,7 +65,14 @@ class ViewController: UIViewController {
         //재생 준비
         audioPlayer!.prepareToPlay()
     }
-
-
+    
+    //세그웨이를 이용해서 이동할 때 호출되는 메소드
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //이동할 뷰 컨트롤러 가져오기
+        let destination = segue.destination as! AVPlayerViewController
+        //비디오 다운로드 받을 URL 생성
+        let url = URL(string: "http://www.ebookfrenzy.com/ios_book/movie/movie.mov")
+        destination.player = AVPlayer(url: url!)
+    }
 }
 

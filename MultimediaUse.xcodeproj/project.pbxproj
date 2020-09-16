@@ -14,6 +14,7 @@
 		6C7435DB25109F4700220FA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C7435DA25109F4700220FA0 /* Assets.xcassets */; };
 		6C7435DE25109F4700220FA0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C7435DC25109F4700220FA0 /* LaunchScreen.storyboard */; };
 		6C7435E62510A09300220FA0 /* test.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6C7435E52510A09300220FA0 /* test.mp3 */; };
+		6C7435E82511980A00220FA0 /* IPhone3G.mov in Resources */ = {isa = PBXBuildFile; fileRef = 6C7435E72511980A00220FA0 /* IPhone3G.mov */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		6C7435DD25109F4700220FA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6C7435DF25109F4700220FA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6C7435E52510A09300220FA0 /* test.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = test.mp3; sourceTree = "<group>"; };
+		6C7435E72511980A00220FA0 /* IPhone3G.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = IPhone3G.mov; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		6C7435D025109F4600220FA0 /* MultimediaUse */ = {
 			isa = PBXGroup;
 			children = (
+				6C7435E72511980A00220FA0 /* IPhone3G.mov */,
 				6C7435E52510A09300220FA0 /* test.mp3 */,
 				6C7435D125109F4600220FA0 /* AppDelegate.swift */,
 				6C7435D325109F4600220FA0 /* SceneDelegate.swift */,
@@ -128,6 +131,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C7435E82511980A00220FA0 /* IPhone3G.mov in Resources */,
 				6C7435DE25109F4700220FA0 /* LaunchScreen.storyboard in Resources */,
 				6C7435DB25109F4700220FA0 /* Assets.xcassets in Resources */,
 				6C7435E62510A09300220FA0 /* test.mp3 in Resources */,
